@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="midApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<title>Mid-Term Rosters!</title>
+	</head>
+	<body>
+		<div class="container" ng-controller="mainController">
+			<header>
+				<div>
+					<h1>Rosters</h1>
+				</div>
+
+				<!-- <nav class="nav">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Tournaments</li>
+						<li><a href="#">Teams</a></li>
+						<li><a href="#">Player Profiles</a></li>
+					</ul>
+				</nav> -->
+			</header>
+			<div ng-repeat="event in tournamentsList">
+				<div class="row eachRow">
+					<div class="col-xs-12 col-sm-12 col-lg-12 tournamentList">
+						<h3>{{event.tournamentName}}</h3>
+						<h4>{{event.tournamentDate}}</h4>
+						<h4>{{event.locationAddress}}</h4>
+						<p>{{event.contactInfo}}</p>
+						<button ng-click="showTeamList()">Show Teams</button>
+							<div ng-repeat="teams in teamsList" ng-show="showTeams">
+								<p>Team Name: {{teams.teamName}}</p>
+								<p>{{teams.teamLocation}}</p>
+							</div>
+					</div>
+				</div>
+
+			</div> <!-- closes ng-repeat div -->
+		</div> <!-- closes main div - mainContrller -->
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
