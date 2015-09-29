@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<title>Mid-Term Rosters!</title>
 	</head>
@@ -15,30 +17,96 @@
 					<h1>Rosters</h1>
 				</div>
 
-				<!-- <nav class="nav">
+				<nav class="nav">
 					<ul>
 						<li><a href="#">Home</a></li>
 						<li>Tournaments</li>
-						<li><a href="#">Teams</a></li>
+						<li><a href="#">The Line Up / Compare team vs team</a></li>
 						<li><a href="#">Player Profiles</a></li>
 					</ul>
-				</nav> -->
+				</nav>
 			</header>
+
+		   <!--  <div class="col-md-9">
+	            <div ng-view></div>
+		        </div>
+	        </div> -->
+
 			<div ng-repeat="event in tournamentsList">
 				<div class="row eachRow">
 					<div class="col-xs-12 col-sm-12 col-lg-12 tournamentList">
-						<h3>{{event.tournamentName}}</h3>
-						<h4>{{event.tournamentDate}}</h4>
-						<h4>{{event.locationAddress}}</h4>
+						<h3>{{event.tournamentName}} | {{event.tournamentDate}} | {{event.locationAddress}}</h3>
 						<p>{{event.contactInfo}}</p>
-						<button ng-click="showTeamList()">Show Teams</button>
-							<div ng-repeat="teams in teamsList" ng-show="showTeams">
-								<p>Team Name: {{teams.teamName}}</p>
-								<p>{{teams.teamLocation}}</p>
-							</div>
-					</div>
-				</div>
+						<button ng-click="showTeamList(event)">Show Teams</button>
+					<hr>
+						<div ng-repeat="teams in teamsList" ng-show="event.showTeams">
+							<p>Team Name: {{teams.teamName}}</p>
+							<p>{{teams.teamLocation}}</p>
+							<button ng-click="showPlayersList(teams)">Players</button>
+						<hr>
+							<div ng-repeat="player in playerList" ng-show="teams.players">
+								<div class="row">
+									<div class="col-xs-3">
+										<p>{{player.lastName}}, {{player.firstName}}</p>
+									</div> 
+									<div class="col-xs-2">
+										<p>{{player.jerseyNumber}}</p>
+									</div>
+									<div class="col-xs-2">
+										<p>{{player.position}}</p>
+									</div>
+									<div class="col-xs-2">
+										<p>{{player.height}}</p>
+									</div>
+								</div> <!-- closes the row -->
+						
+							<!-- Large modal -->
 
+								<!-- <div class="card">
+								  <div class="card-block">
+								    <h4 class="card-title">Card title</h4>
+								    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+								  </div>
+								  <img data-src="holder.js/100%x180/?text=Image" alt="Card image">
+								  <div class="card-block">
+								    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								    <a href="#" class="card-link">Card link</a>
+								    <a href="#" class="card-link">Another link</a>
+								  </div>
+								</div> -->
+
+
+
+								<button ng-click="showIndividualPlayer(player)" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">View Player Profile</button>
+							<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+							  <div class="modal-dialog modal-lg">
+							    <div class="modal-content">
+							      <div ng-show="player.showPlayer">
+									{{player.lastName}}
+									{{player.firstName}}
+									{{player.jerseyNumber}}
+									{{player.position}}
+									{{player.height}}
+									{{player.year}}
+									{{player.gamesPlayed}}
+									{{player.FG}}
+									{{player.threePointers}}
+									{{player.FT}}
+									{{player.rebounds}}
+									{{player.assists}}
+								</div>
+<!-- 
+								<button ng-click="showIndividualPlayer(player)">View Player Profile</button> -->
+							    </div>
+							  </div>
+							</div>
+
+
+								
+							</div> <!-- closes the ng-repeat player in playList -->
+						</div> <!-- closes the ng-repeat teams in teamsList -->
+					</div> <!-- closes the div class tournamentList -->
+				</div><!-- closes the row eachRow -->
 			</div> <!-- closes ng-repeat div -->
 		</div> <!-- closes main div - mainContrller -->
 		<script type="text/javascript" src="main.js"></script>

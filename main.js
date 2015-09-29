@@ -18,6 +18,7 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	this.FT = FT;
 	this.rebounds = rebounds;
 	this.assists = assists;	
+	this.showPlayer = false;
 	playerList.push(this)
 	}
 	// Player.prototype.stringify = function(){
@@ -37,6 +38,7 @@ var Teams = function(teamName, teamLocation, teamPlayers){
 	this.teamName = teamName;
 	this.teamLocation = teamLocation;
 	this.teamPlayers = teamPlayers;
+	this.showTeams = false;
 	teamsList.push(this)
 	}
 	Teams.prototype.stringify = function(){
@@ -46,6 +48,7 @@ var Teams = function(teamName, teamLocation, teamPlayers){
 	var EWU = new Teams('Eastern Eagles', 'Cheney, WA', [Williams, Arnold, Jones])
 	var Jessey = new Teams('Jessey Sloths', 'Lakewood, CO', [Williams, Arnold, Jones])
 	var Hansel = new Teams('Hansel Tigers', 'Colorado Springs, CO', [Williams, Arnold, Jones])
+
 
 var tournamentsList = []
 var Tournaments = function(tournamentName, tournamentDate, locationAddress, contactInfo, tournamentTeams){
@@ -65,7 +68,7 @@ var Tournaments = function(tournamentName, tournamentDate, locationAddress, cont
 	new Tournaments('July Tournament', 'July 1-4th, 2016', 'Dallas, TX', 'Dallas Buyers Club | dallasBuyers@club.com | 333-444-5555', [RefactorU, EWU, Jessey, Hansel])
 	new Tournaments('Hot Summer Tournament','July 19-22nd, 2016', 'San Diego, CA', 'Cali Girl| cali@girl.com | 888-999-4455', [RefactorU, EWU, Jessey, Hansel])
 	new Tournaments('High as a Kite', 'August 5-8th, 2016','Boulder, CO', 'High Kite | high@kite.com | 420-420-4420', [RefactorU, EWU, Jessey, Hansel])
-	new Tournaments("Roll 'em", 'September 12-15th, 2016', 'Las Vegas, NV', "I'm in debt | imIn@debt.com | 777-777-7777'", [RefactorU, EWU, Jessey, Hansel])
+	new Tournaments("Roll 'em", 'September 12-15th, 2016', 'Las Vegas, NV', "I'm in debt | imIn@debt.com | 777-777-7777", [RefactorU, EWU, Jessey, Hansel])
 
 
 	return {
@@ -90,12 +93,31 @@ angular.module("midApp").controller('mainController', ['$scope','gameFactory', f
 	// 	}
 	// }
 
-	$scope.showTeamList = function($event){
-		$scope.showTeams = !$scope.showTeams;		
-		$scope.hideTeams = !$scope.hideTeams;			
+	$scope.showTeamList = function(currentTournament){ // using currentTournament targets the current turnament so showTeams only shows for that specific tournament
+		currentTournament.showTeams = !currentTournament.showTeams;		
 	}
 
+	$scope.showPlayersList = function(currentRoster){
+		currentRoster.players = !currentRoster.players;
+	}
+
+	$scope.showIndividualPlayer = function(currentPlayer){
+		currentPlayer.showPlayer = !currentPlayer.showPlayer;
+	}
+
+	$('#myModal').on('shown.bs.modal', function () {
+ 	$('#myInput').focus()
+	})
+
+
+
 }])
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,15 @@
 body {
-	background-image: url("http://boonebasketball.com/wp-content/uploads/2014/05/basketball-court-floor.jpg");
+	/*background-image: url("http://boonebasketball.com/wp-content/uploads/2014/05/basketball-court-floor.jpg");*/
+}
+
+.nav {
+	margin: 0;
+	padding: 0;
+}
+.nav ul {
+	font-size: 15px;
+	/*color: aqua;*/
+	list-style-type: none;
 }
 
 .eachRow {
@@ -7,6 +17,9 @@ body {
 }
 
 .tournamentList {
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
+	border: solid 1px black;
 
 }
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
