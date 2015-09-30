@@ -1,25 +1,76 @@
 body {
-	/*background-image: url("http://boonebasketball.com/wp-content/uploads/2014/05/basketball-court-floor.jpg");*/
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
-.nav {
-	margin: 0;
-	padding: 0;
+.navbar-fixed-top .nav {
+    padding: 15px 0;
 }
-.nav ul {
-	font-size: 15px;
-	/*color: aqua;*/
-	list-style-type: none;
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
 }
+
 
 .eachRow {
 	margin-top: 10px;
+	/*border: solid 1px black;*/
+	color: #6A6D6E;
+	box-shadow: 2px, 2px, 2px .1;
+	border-bottom: 1px dashed #FFAA65;
+	margin-bottom: 10px;
 }
 
-.tournamentList {
-	/*background-color: #ffffff;*/
-	border: solid 1px black;
+.eachRow:hover {
+	color: #404242;
+	background-color: #F2F2F2;
+}
 
+.teamsButton {
+	text-align: right;
+}
+
+.teamLogo img {
+	border-radius: 50px;
+	height: 60px;
+	width: 60px;
+}
+
+/*.teamInfo {
+	border-bottom: 1px dashed #FFAA65;
+	background-color: #fff;
+}*/
+
+.playerList {
+	/*border-bottom: 1px dashed #6A6D6E;*/
+}
+
+.header {
+	background-color: peachpuff;
 }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}

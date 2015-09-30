@@ -23,7 +23,8 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	}
 	// Player.prototype.stringify = function(){
 	// 	console.log('Last Name: ' + this.lastName  + '\nFirst Name: ' + this.firstName  + '\nNo: ' + this.jerseyNumber  + '\nPosition: ' + this.position  + '\nHeight: ' + this.height  + '\nYear: ' + this.year  + '\nGP: ' + this.gamesPlayed  + '\nField Goals: ' + this.FG  + '\n3PT: ' + this.threePointers  + '\nFree Throw: ' + this.FT  + '\nRebounds: ' + this.rebounds  + '\nAssists: ' + this.assists);
-	// }	
+	// }
+	
 	var Williams = new Player('Williams', 'Melissa', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
 	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
 	var Jones 	 = new Player('Jones', 'Jessica', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
@@ -34,7 +35,8 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	var Pearson  = new Player('Pearson', 'Missy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
 
 var teamsList = []	
-var Teams = function(teamName, teamLocation, teamPlayers){
+var Teams = function(teamName, teamLocation, teamPlayers, teamLogo){
+	this.teamLogo = teamLogo || 'http://www.morrell-middleton.co.uk/wp-content/uploads/logo-placeholder.jpg';
 	this.teamName = teamName;
 	this.teamLocation = teamLocation;
 	this.teamPlayers = teamPlayers;
@@ -44,10 +46,10 @@ var Teams = function(teamName, teamLocation, teamPlayers){
 	Teams.prototype.stringify = function(){
 		console.log('Team Name: ' + this.teamName + '\nLocation: ' + this.teamLocation);
 	}
-	var RefactorU = new Teams('refactorU Brackets', 'Boulder, CO', [Williams, Arnold, Jones])
-	var EWU = new Teams('Eastern Eagles', 'Cheney, WA', [Williams, Arnold, Jones])
-	var Jessey = new Teams('Jessey Sloths', 'Lakewood, CO', [Williams, Arnold, Jones])
-	var Hansel = new Teams('Hansel Tigers', 'Colorado Springs, CO', [Williams, Arnold, Jones])
+	var RefactorU = new Teams( 'refactorU Brackets', 'Boulder, CO', [Williams, Arnold, Jones], 'http://lorempixel.com/100/100/sports/')
+	var EWU = new Teams('Eastern Eagles', 'Cheney, WA', [Williams, Arnold, Jones],'http://lorempixel.com/100/100/sports/')
+	var Jessey = new Teams( 'Jessey Sloths', 'Lakewood, CO', [Williams, Arnold, Jones],'http://lorempixel.com/100/100/sports/')
+	var Hansel = new Teams( 'Hansel Tigers', 'Colorado Springs, CO', [Williams, Arnold, Jones],'http://lorempixel.com/100/100/sports/')
 
 
 var tournamentsList = []
@@ -103,10 +105,11 @@ angular.module("midApp").controller('mainController', ['$scope','gameFactory', f
 
 	$scope.showIndividualPlayer = function(currentPlayer){
 		currentPlayer.showPlayer = !currentPlayer.showPlayer;
+		console.log('hi')
 	}
 
 	$('#myModal').on('shown.bs.modal', function () {
- 	$('#myInput').focus()
+ 	// $('#myInput').focus()
 	})
 
 
