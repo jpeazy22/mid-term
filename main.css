@@ -10,6 +10,10 @@ body {
     padding: 0 15px;
 }
 
+.navbar-fixed-top .navbar-brand img {
+    margin-top: 10px;
+}
+
 
 .eachRow {
 	margin-top: 10px;
@@ -35,10 +39,10 @@ body {
 	width: 60px;
 }
 
-/*.teamInfo {
-	border-bottom: 1px dashed #FFAA65;
+.teamInfo {
+	/*border-bottom: 1px dashed #FFAA65;*/
 	background-color: #fff;
-}*/
+}
 
 .playerList {
 	/*border-bottom: 1px dashed #6A6D6E;*/
@@ -48,13 +52,55 @@ body {
 	background-color: peachpuff;
 }
 
+.profilePic img {
+	height: 170px;
+}
+
+.individual img {
+	height: 75px;
+	width: 50px;
+}
+
+.playerCard {
+	border: solid 1px black;
+	display: inline-block;
+	float: left;
+	width: 22%;
+	margin: 1%;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+
+}
+
+.playerCard h4 img {
+}
+
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 
+.modal-content {
+	/*height: 300px;*/
+	background-color: #ffffff;
+}
 
 
+.footer {
+	clear: both;
+	background-color: #F2F2F2;
+	height: 70px;
+	text-align: center;
+	width: 100%;
 
+}
 
+.footer img {
+	margin: 15px 5px 0px 5px;
+}
+
+.btn-warning {
+	background-color: #ee581a;
+}
 
 
 

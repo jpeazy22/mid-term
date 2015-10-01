@@ -5,7 +5,7 @@ angular.module('midApp')
 
 		var playerList = []
 
-var Player = function(pastName, firstName, jerseyNumber, position, height, year, gamesPlayed, FG, threePointers, FT, rebounds, assists){
+var Player = function(pastName, firstName, jerseyNumber, position, height, year, gamesPlayed, FG, threePointers, FT, rebounds, assists, profilePic){
 	this.lastName = pastName;
 	this.firstName = firstName;
 	this.jerseyNumber = jerseyNumber;
@@ -18,6 +18,7 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	this.FT = FT;
 	this.rebounds = rebounds;
 	this.assists = assists;	
+	this.profilePic = profilePic || 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png';
 	this.showPlayer = false;
 	playerList.push(this)
 	}
@@ -25,14 +26,14 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	// 	console.log('Last Name: ' + this.lastName  + '\nFirst Name: ' + this.firstName  + '\nNo: ' + this.jerseyNumber  + '\nPosition: ' + this.position  + '\nHeight: ' + this.height  + '\nYear: ' + this.year  + '\nGP: ' + this.gamesPlayed  + '\nField Goals: ' + this.FG  + '\n3PT: ' + this.threePointers  + '\nFree Throw: ' + this.FT  + '\nRebounds: ' + this.rebounds  + '\nAssists: ' + this.assists);
 	// }
 	
-	var Williams = new Player('Williams', 'Melissa', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Jones 	 = new Player('Jones', 'Jessica', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Doe 	 = new Player('Doe', 'Janie', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Walker 	 = new Player('Walker', 'Johnny', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Wilson 	 = new Player('Wilson', 'Cat', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Johnson  = new Player('Johnson', 'Amy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
-	var Pearson  = new Player('Pearson', 'Missy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2)
+	var Williams = new Player('Williams', 'Melissa', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Jones 	 = new Player('Jones', 'Jessica', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Doe 	 = new Player('Doe', 'Janie', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Walker 	 = new Player('Walker', 'Johnny', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Wilson 	 = new Player('Wilson', 'Cat', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Johnson  = new Player('Johnson', 'Amy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Pearson  = new Player('Pearson', 'Missy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
 
 var teamsList = []	
 var Teams = function(teamName, teamLocation, teamPlayers, teamLogo){
@@ -95,7 +96,15 @@ angular.module("midApp").controller('mainController', ['$scope','gameFactory', f
 	// 	}
 	// }
 
-	$scope.showTeamList = function(currentTournament){ // using currentTournament targets the current turnament so showTeams only shows for that specific tournament
+	$scope.showTournamentList = function(){
+		tournamentsList = !tournamentsList;
+	}
+
+	$scope.showProfiles = function(){
+		profiles = !profiles;
+	}
+
+	$scope.showTeamList = function(currentTournament){ // using currentTournament targets the current tournament so showTeams only shows for that specific tournament
 		currentTournament.showTeams = !currentTournament.showTeams;		
 	}
 
