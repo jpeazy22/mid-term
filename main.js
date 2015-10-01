@@ -20,20 +20,39 @@ var Player = function(pastName, firstName, jerseyNumber, position, height, year,
 	this.assists = assists;	
 	this.profilePic = profilePic || 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png';
 	this.showPlayer = false;
+	this.watched = false;
 	playerList.push(this)
 	}
 	// Player.prototype.stringify = function(){
 	// 	console.log('Last Name: ' + this.lastName  + '\nFirst Name: ' + this.firstName  + '\nNo: ' + this.jerseyNumber  + '\nPosition: ' + this.position  + '\nHeight: ' + this.height  + '\nYear: ' + this.year  + '\nGP: ' + this.gamesPlayed  + '\nField Goals: ' + this.FG  + '\n3PT: ' + this.threePointers  + '\nFree Throw: ' + this.FT  + '\nRebounds: ' + this.rebounds  + '\nAssists: ' + this.assists);
 	// }
 	
-	var Williams = new Player('Williams', 'Melissa', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
-	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
-	var Jones 	 = new Player('Jones', 'Jessica', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Lesky	 = new Player('Lesky', 'Seth', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Stenquist = new Player('Stenquist', 'Maria', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Cripe 	 = new Player('Cripe', 'Richelle', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
 	var Doe 	 = new Player('Doe', 'Janie', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
 	var Walker 	 = new Player('Walker', 'Johnny', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
-	var Wilson 	 = new Player('Wilson', 'Cat', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
-	var Johnson  = new Player('Johnson', 'Amy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
-	var Pearson  = new Player('Pearson', 'Missy', 42, 'F', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Hirsch 	 = new Player('Hirsch', 'Michael', 42, 'C', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Khoukaz  = new Player('Khoukaz', 'Edouard', 42, 'C', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Moody  	 = new Player('Moody', 'Steven', 42, 'C', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Williams = new Player('Williams', 'Melissa', 42, 'C', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'C', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Tucker 	 = new Player('Tucker', 'Tucker', 42, 'PF', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Leasure  = new Player('Leasure', 'Brent', 42, 'PF', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Eagan 	 = new Player('Eagan', 'Jessey', 42, 'PF', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Wilson 	 = new Player('Wilson', 'Cat', 42, 'PF', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Johnson  = new Player('Johnson', 'Amy', 42, 'PF', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Revere 	 = new Player('Revere', 'Dave', 42, 'SG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Lopez 	 = new Player('Lopez', 'Hansel', 42, 'SG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Arnold 	 = new Player('Arnold', 'Mary', 42, 'SG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Jones 	 = new Player('Jones', 'Jessica', 42, 'SG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Doe 	 = new Player('Doe', 'Janie', 42, 'SG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Ford 	 = new Player('Ford', 'Danielle', 42, 'PG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Origlio  = new Player('Origlio', 'Paula', 42, 'PG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Johnson  = new Player('Johnson', 'Amy', 42, 'PG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Pearson  = new Player('Pearson', 'Missy', 42, 'PG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+	var Pearson  = new Player('Pearson', 'Missy', 42, 'PG', '6-1', 'Sr.', 33, 49.3, 20, 73.3, 9.5, 2, 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png')
+
 
 var teamsList = []	
 var Teams = function(teamName, teamLocation, teamPlayers, teamLogo){
@@ -96,12 +115,20 @@ angular.module("midApp").controller('mainController', ['$scope','gameFactory', f
 	// 	}
 	// }
 
-	$scope.showTournamentList = function(){
-		tournamentsList = !tournamentsList;
+	$scope.isChecked = function(index){
+		$scope.playerList[index].watched = ! $scope.playerList[index].watched 
+		if($scope.playerList[index].watched === true){
+			console.log($scope.playerList[index])
+		}
 	}
+	$scope.showAbout = true;
+	$scope.showTournamentList = false;
+	$scope.showPlayerProfiles = false;
+	$scope.navbar = function (one,two,three){
+		$scope.showAbout = one;
+		$scope.showTournamentList = two;
+		$scope.showPlayerProfiles = three;
 
-	$scope.showProfiles = function(){
-		profiles = !profiles;
 	}
 
 	$scope.showTeamList = function(currentTournament){ // using currentTournament targets the current tournament so showTeams only shows for that specific tournament
