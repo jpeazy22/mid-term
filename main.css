@@ -38,23 +38,31 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 	color: #D53018;
 }
 
+.bracket {
+	background-color: rgba(242, 242, 242, .3);
+}
+.bracket img {
+	margin: 0 10%;
+
+}
+
 .eachRow {
 	margin-top: 10px;
-	background-color: rgba(242, 242, 242, .3);
+	background-color: rgba(242, 242, 242, .1);
 	color: #ffffff;
 	margin-bottom: 10px;
 }
 
 .eachRow:hover {
-	background-color: rgba(242, 242, 242, .5);
+	background-color: rgba(242, 242, 242, .3);
 }
 
 .spacing {
-	height: 70px;
+	height: 65px;
 	vertical-align: center;
 	clear: both;
-	margin: 20px 0 0 0px;
-	padding: 15px 0;
+	margin: 5px 0 0 0px;
+	padding: 5px 0;
 	box-shadow: 1px 1px 1px #888888;
 }
 
@@ -71,9 +79,15 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 
 .teamInfo {
 	border-bottom: 1px dashed #FFAA65;
-	/*background-color: #fff;*/
-	background-color: rgba(242, 242, 242, .4);
+	background-color: #fff;
+	/*background-color: rgba(242, 242, 242, 1);*/
+	color: #999999;
 
+}
+
+.playerList {
+	padding-left: 50px;
+	margin-top: 20px;
 }
 
 .profilePic img {
@@ -107,12 +121,12 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 }
 
 .btn-warning {
-	background-color: #505050;
+	background-color: #D53018;
 	border: 1px solid black;
 }
 
 .btn-warning:hover {
-	background-color: #D53018;
+	background-color: #505050;
 
 }
 
@@ -139,50 +153,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 }
 
 
-/*=================== card flip ==================*/
-.flip-container {
-	perspective: 1000;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
-
-/*=================== end card flip ==================*/
+/*=============================================*/
 
 @media(max-width: 960px){
 	.playerCard {
