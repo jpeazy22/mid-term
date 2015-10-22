@@ -1,0 +1,72 @@
+[
+	{
+		"l_name" : "Lesky",
+		"f_name" : "Seth",
+		"jersey_no" : 42,
+		"position" : "F",
+		"height" : "6-1",
+		"year" : "Sr",
+		"game_played" : 33,
+		"three_pointers" : 20,
+		"rebounds" : 9.5,
+		"free_throws" : 24,
+		"field_goals" : 49,
+		"assists" : 12
+	},
+		{
+		"l_name" : "Lesky",
+		"f_name" : "Seth",
+		"jersey_no" : 42,
+		"position" : "F",
+		"height" : "6-1",
+		"year" : "Sr",
+		"game_played" : 33,
+		"three_pointers" : 20,
+		"rebounds" : 9.5,
+		"free_throws" : 24,
+		"field_goals" : 49,
+		"assists" : 12
+	},
+		{
+		"l_name" : "Lesky",
+		"f_name" : "Seth",
+		"jersey_no" : 42,
+		"position" : "F",
+		"height" : "6-1",
+		"year" : "Sr",
+		"game_played" : 33,
+		"three_pointers" : 20,
+		"rebounds" : 9.5,
+		"free_throws" : 24,
+		"field_goals" : 49,
+		"assists" : 12
+	},
+		{
+		"l_name" : "Lesky",
+		"f_name" : "Seth",
+		"jersey_no" : 42,
+		"position" : "F",
+		"height" : "6-1",
+		"year" : "Sr",
+		"game_played" : 33,
+		"three_pointers" : 20,
+		"rebounds" : 9.5,
+		"free_throws" : 24,
+		"field_goals" : 49,
+		"assists" : 12
+	},
+		{
+		"l_name" : "Lesky",
+		"f_name" : "Seth",
+		"jersey_no" : 42,
+		"position" : "F",
+		"height" : "6-1",
+		"year" : "Sr",
+		"game_played" : 33,
+		"three_pointers" : 20,
+		"rebounds" : 9.5,
+		"free_throws" : 24,
+		"field_goals" : 49,
+		"assists" : 12
+	}
+]

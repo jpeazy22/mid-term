@@ -1,0 +1,42 @@
+[
+	{
+		"tournament_name" : "Tournament: 1",
+		"tournament_location_city" : "Seattle",
+		"contact_fname" : "Marky",
+		"contact_lname" : "Mark",
+		"contact_email" : "mark@mark.com",
+		"contact_phone" : "345-333-5555"
+	},
+	{
+		"tournament_name" : "Tournament: 2",
+		"tournament_location_city" : "Denver",
+		"contact_fname" : "Jon",
+		"contact_lname" : "Jones",
+		"contact_email" : "Jon@jones.com",
+		"contact_phone" : "333-555-3333"
+	},
+	{
+		"tournament_name" : "Tournament: 3",
+		"tournament_location_city" : "Atlanta",
+		"contact_fname" : "Billy",
+		"contact_lname" : "Bill",
+		"contact_email" : "willy@wonka.com",
+		"contact_phone" : "555-333-7676"
+	},
+	{
+		"tournament_name" : "Tournament: 4",
+		"tournament_location_city" : "Austin",
+		"contact_fname" : "George",
+		"contact_lname" : "Tomboy",
+		"contact_email" : "tom@boy.com",
+		"contact_phone" : "333-666-3333"
+	},
+	{
+		"tournament_name" : "Tournament: 5",
+		"tournament_location_city" : "Memphis",
+		"contact_fname" : "Amy",
+		"contact_lname" : "Lamy",
+		"contact_email" : "what@what.com",
+		"contact_phone" : "666-333-3333"
+	},
+]

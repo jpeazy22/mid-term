@@ -1,0 +1,27 @@
+[
+	{
+		"team_name" : "Team 1",
+		"team_location_city" : "Boulder",
+		"team-logo" : "tbd"
+	},
+	{
+		"team_name" : "Team 2",
+		"team_location_city" : "Denver",
+		"team-logo" : "tbd"
+	},
+	{
+		"team_name" : "Team 3",
+		"team_location_city" : "San Diego",
+		"team-logo" : "tbd"
+	},
+	{
+		"team_name" : "Team 4",
+		"team_location_city" : "Orange County",
+		"team-logo" : "tbd"
+	},
+	{
+		"team_name" : "Team 5",
+		"team_location_city" : "Seattle",
+		"team-logo" : "tbd"
+	}
+]
