@@ -1,28 +1,28 @@
 angular.module("midApp", []);
 
-angular.module('midApp')
-	.factory('gameFactory', function(){
+// angular.module('midApp')
+// 	.factory('gameFactory', function(){
 
-		var playerList = []
+// 		var playerList = []
 
-var Player = function(pastName, firstName, jerseyNumber, position, height, year, gamesPlayed, FG, threePointers, FT, rebounds, assists, profilePic){
-	this.lastName = pastName;
-	this.firstName = firstName;
-	this.jerseyNumber = jerseyNumber;
-	this.position = position;
-	this.height = height;
-	this.year = year;
-	this.gamesPlayed = gamesPlayed;
-	this.FG = FG;
-	this.threePointers = threePointers;
-	this.FT = FT;
-	this.rebounds = rebounds;
-	this.assists = assists;	
-	this.profilePic = profilePic || 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png';
-	this.showPlayer = false;
-	this.watched = false;
-	playerList.push(this)
-	}
+// var Player = function(pastName, firstName, jerseyNumber, position, height, year, gamesPlayed, FG, threePointers, FT, rebounds, assists, profilePic){
+// 	this.lastName = pastName;
+// 	this.firstName = firstName;
+// 	this.jerseyNumber = jerseyNumber;
+// 	this.position = position;
+// 	this.height = height;
+// 	this.year = year;
+// 	this.gamesPlayed = gamesPlayed;
+// 	this.FG = FG;
+// 	this.threePointers = threePointers;
+// 	this.FT = FT;
+// 	this.rebounds = rebounds;
+// 	this.assists = assists;	
+// 	this.profilePic = profilePic || 'http://folkhalsocentrum.se/wp-content/themes/Folkhalsocentrum/img/person-placeholder.png';
+// 	this.showPlayer = false;
+// 	this.watched = false;
+// 	playerList.push(this)
+// 	}
 	// Player.prototype.stringify = function(){
 	// 	console.log('Last Name: ' + this.lastName  + '\nFirst Name: ' + this.firstName  + '\nNo: ' + this.jerseyNumber  + '\nPosition: ' + this.position  + '\nHeight: ' + this.height  + '\nYear: ' + this.year  + '\nGP: ' + this.gamesPlayed  + '\nField Goals: ' + this.FG  + '\n3PT: ' + this.threePointers  + '\nFree Throw: ' + this.FT  + '\nRebounds: ' + this.rebounds  + '\nAssists: ' + this.assists);
 	// }

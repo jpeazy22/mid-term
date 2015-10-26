@@ -1,0 +1,87 @@
+<h1>Tournaments</h1>
+<div class="courtSide">
+	<h2 class="titles">Tournament Schedule</h2>
+	<div ng-repeat="event in tournamentsList">
+		<div class="row eachRow">
+			<div class="col-xs-12 col-sm-12 col-lg-12 tournamentList">
+				<h4>{{event.tournamentName}} | {{event.tournamentDate}} | {{event.locationAddress}}</h4>
+			</div>
+			<div class="col-xs-8 col-sm-8 col-lg-8">
+				<p>{{event.contactInfo}}</p>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-lg-4 teamsButton">
+				<button ng-click="showTeamList(event)" class="btn-xs">Show Teams</button>
+			</div>
+			<div class="col-xs-12 teamInfo"><!-- container for nested row -->
+				<div class="row" ng-repeat="teams in teamsList" ng-show="event.showTeams">
+					<div class="spacing">
+						<div class="col-xs-2 col-sm-3 col-lg-3 teamLogo">
+							<img ng-src="{{teams.teamLogo}}">
+						</div>
+						<div class="col-xs-3 col-sm-3 col-lg-4">
+							<h5>{{teams.teamName}}hvjv</h5>
+						</div>
+						<div class="col-xs-4 col-sm-3 col-lg-4">
+							<h5>{{teams.teamLocation}}</h5>
+						</div>
+						<!-- <div class="col-xs-4 col-sm-3 col-lg-4">
+								<h5>{{teams.teamPlayers}}</h5>
+						</div> -->
+						<div class="col-xs-3 col-sm-3 col-lg-1">
+							<button ng-click="showPlayersList(teams)">Players</button>
+						</div>
+					</div>
+					<div class="col-xs-12 playerList"><!-- container for nested row -->
+						<div class="row" ng-repeat="player in playerList" ng-show="teams.players">
+							<div class="col-xs-3">
+								<p>{{player.lastName}}, {{player.firstName}}</p>
+							</div>
+							<div class="col-xs-1">
+								<p>{{player.jerseyNumber}}</p>
+							</div>
+							<div class="col-xs-1">
+								<p>{{player.position}}</p>
+							</div>
+							<div class="col-xs-2">
+								<p>{{player.height}}</p>
+							</div>
+							<div class="col-xs-3">
+								<button ng-click="showIndividualPlayer(player)" type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target=".playerModal-{{$index}}">View Player Profile</button>
+							</div>
+							<div class="modal fade playerModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="row modal-content">
+										<div ng-show="player.showPlayer">
+											<div class="col-xs-10 col-md-11">
+												<h3>{{player.firstName}} {{player.lastName}}</h3>
+											</div>
+											<div class="col-xs-2 col-md-1">
+												<button class="btn-md btn-warning" data-toggle="modal" data-target=".playerModal-{{$index}}" ng-click="showIndividualPlayer(player)">X</button>
+											</div>
+											<div class="col-xs-12">
+												<hr>
+											</div>
+											<div class="col-xs-12 col-sm-12 col-md-4 profilePic">
+												<img src="{{player.profilePic}}">
+											</div>
+											<div class="col-xs-6 col-md-4"><h5>Jersey Number: {{player.jerseyNumber}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Position: {{player.position}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Height: {{player.height}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Year: {{player.year}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Games Played: {{player.gamesPlayed}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Field Goal: {{player.FG}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Three Point: {{player.threePointers}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Free Throw: {{player.FT}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Rebound: {{player.rebounds}}</h5></div>
+											<div class="col-xs-6 col-md-4"><h5>Assists: {{player.assists}}</h5></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- closing container -->
+	</div>
+</div>
