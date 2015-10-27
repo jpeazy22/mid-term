@@ -1,10 +1,10 @@
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 	/*background-image: url('http://7-themes.com/data_images/out/74/7024018-basketball-court.jpg');*/
-	background-image: url('http://img0.gtsstatic.com/wallpapers/1948f2d53fe62256a3702d13d2d55c4a_large.jpeg');
+	/*background-image: url('http://img0.gtsstatic.com/wallpapers/1948f2d53fe62256a3702d13d2d55c4a_large.jpeg');*/
 	background-size: cover;
 	background-attachment: fixed;
-	color: #fff;
+	color: #000000;
 }
 
 /*=================== nav bar ==================*/

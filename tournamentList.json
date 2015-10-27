@@ -1,0 +1,278 @@
+[{
+    "league": {
+        "id": "affab7b6-647e-4304-bbe2-1f9d68cd0cea",
+        "name": "NCAA WOMEN",
+        "alias": "NCAAW"
+    },
+    "season": {
+        "id": "89dabef3-b832-414a-85e6-b175436a835a",
+        "year": 2014,
+        "type": "REG"
+    },
+    "tournaments": [{
+        "id": "0a345fb4-1f1b-4d86-aeed-5359dd8fe46e",
+        "name": "Black Bear Thanksgiving Tournament",
+        "location": "Orono, ME, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "13b81d55-7f6f-47ac-8c56-d16c492336be",
+        "name": "Arizona State Wells Fargo Holiday Tournament",
+        "location": "Tempe, AZ, USA",
+        "status": "closed",
+        "start_date": "2014-12-19",
+        "end_date": "2014-12-21"
+    }, {
+        "id": "1687db05-5015-4978-8e99-166ba87e55ea",
+        "name": "Preseason WNIT",
+        "status": "closed",
+        "start_date": "2014-11-13",
+        "end_date": "2014-11-23"
+    }, {
+        "id": "36aa9504-6c64-408b-8fab-7069d8b6fddf",
+        "name": "New Mexico Thanksgiving Tournament",
+        "location": "Albuquerque, NM, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "4099cd9e-5e2c-4a12-9fe7-a02b158afd85",
+        "name": "Fordham Holiday Classic",
+        "location": "Bronx, NY, USA",
+        "status": "closed",
+        "start_date": "2014-12-28",
+        "end_date": "2014-12-30"
+    }, {
+        "id": "4460d644-ecfa-4714-b243-4efeb37f27eb",
+        "name": "DoubleTree LA Westside Thanksgiving Classic",
+        "location": "Los Angeles, CA, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "462c1a17-7784-4354-8c38-f1dc2e077e9a",
+        "name": "University of Denver Thanksgiving Tournament",
+        "location": "Denver, CO, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "4fd1f241-c68a-4889-b7ec-6e83791f6f0e",
+        "name": "Gulf Coast Showcase",
+        "location": "Estero, FL, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "54c8067a-8875-4902-8122-51c85626e20c",
+        "name": "Radisson Chatsworth Thanksgiving Basketball Tournament",
+        "location": "Los Angeles, CA, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "57f3432c-3ac1-4c38-8cf8-fcdbb7860407",
+        "name": "Hofstra Thanksgiving Tournament",
+        "location": "Hempstead, NY, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "5ab9cb2f-54fd-4eb8-93ec-d52fdf500006",
+        "name": "Ball State Federal Credit Union Thanksgiving Classic",
+        "location": "Muncie, IN, USA",
+        "status": "closed",
+        "start_date": "2014-11-28",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "5acd3244-379a-4153-b546-f4a9b3de4edc",
+        "name": "Gator Holiday Classic",
+        "location": "Gainesville, FL, USA",
+        "status": "closed",
+        "start_date": "2014-12-20",
+        "end_date": "2014-12-23"
+    }, {
+        "id": "5ca3911c-eeff-4d32-8de6-0a0a89a54c0e",
+        "name": "SMU Thanksgiving Tournament",
+        "location": "Dallas, TX, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "5f1eb2ed-5b2e-4370-b04d-6f1fdaa7dd3c",
+        "name": "Lady Rebel Round-Up",
+        "location": "Las Vegas, NV, USA",
+        "status": "closed",
+        "start_date": "2014-11-28",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "6d7d4002-9629-418e-8c8f-df8e52e34cf2",
+        "name": "FAU Thanksgiving Tournament",
+        "location": "Boca Raton, FL, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "6f400701-6cc9-4567-b7ba-9c4dd70392e6",
+        "name": "Lady Griz Holiday Classic",
+        "location": "Missoula, MT, USA",
+        "status": "closed",
+        "start_date": "2014-12-18",
+        "end_date": "2014-12-20"
+    }, {
+        "id": "8038c68a-4b99-45ce-bc06-ef1f66ab7f1d",
+        "name": "Hawk Classic",
+        "location": "Philadelphia, PA, USA",
+        "status": "closed",
+        "start_date": "2014-12-27",
+        "end_date": "2014-12-29"
+    }, {
+        "id": "92c6e9a1-2b2f-4361-839c-94539d9c14a2",
+        "name": "Seton Hall Thanksgiving Tournament",
+        "location": "South Orange, NJ, USA",
+        "status": "closed",
+        "start_date": "2014-11-28",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "936e044b-16d3-4abc-aa17-b51d5c7fb639",
+        "name": "Miami Thanksgiving Tournament",
+        "location": "Miami, FL, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "9f6205ab-8bfc-43dc-b9b0-44f82768fe8e",
+        "name": "Brown Classic",
+        "location": "Providence, RI, USA",
+        "status": "closed",
+        "start_date": "2014-12-05",
+        "end_date": "2014-12-07"
+    }, {
+        "id": "ac62b00f-710f-41fa-91d7-aa407b5c1a24",
+        "name": "Paradise Jam",
+        "location": "St. Thomas,, VIR",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "ada149ab-9dc0-489f-991b-bd15e63c5169",
+        "name": "Lady Eagle Thanksgiving Classic",
+        "location": "Hattiesburg, MS, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "b6c522af-9db2-46ff-9da4-9b71b0245509",
+        "name": "John Ascuaga's Nugget Classic",
+        "location": "Reno, NV, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "b87dc428-c4f8-4f81-8d95-c868b76095ee",
+        "name": "Hawkeye Challenge",
+        "location": "Des Moines, IA, USA",
+        "status": "closed",
+        "start_date": "2014-11-20",
+        "end_date": "2014-11-22"
+    }, {
+        "id": "c3f77e26-1b1e-48f1-9c45-93c0bb3dee44",
+        "name": "Miami Post Christmas Tournament",
+        "location": "Miami, FL, USA",
+        "status": "closed",
+        "start_date": "2014-12-27",
+        "end_date": "2014-12-29"
+    }, {
+        "id": "c8229e4e-987f-4fa3-9987-55fcd9d7770c",
+        "name": "FIU Thanksgiving Classic",
+        "location": "Miami, FL, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "d49ba527-0ecb-4f3b-9499-4fcfbe01cf7d",
+        "name": "Cal Classic",
+        "location": "Berkeley, CA, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "d542317b-c6d6-46dd-9cba-03de32c532d4",
+        "name": "Mid-Eastern Athletic",
+        "location": "Norfolk, VA, USA",
+        "status": "scheduled",
+        "start_date": "2015-03-09",
+        "end_date": "2015-03-14"
+    }, {
+        "id": "d5747237-41cb-49e6-aa52-f561e1b74fb8",
+        "name": "Junkanoo Jam",
+        "location": "Freeport,, BAH",
+        "status": "closed",
+        "start_date": "2014-11-26",
+        "end_date": "2014-11-29"
+    }, {
+        "id": "d704bf18-6d27-4227-983d-7fd3a4472725",
+        "name": "Great Alaska Shootout",
+        "location": "Anchorage, AK, USA",
+        "status": "closed",
+        "start_date": "2014-11-24",
+        "end_date": "2014-11-27"
+    }, {
+        "id": "d7362c83-119b-46dd-8786-4dc0ffe42693",
+        "name": "Cancun Challenge",
+        "location": "Cancun,, MEX",
+        "status": "closed",
+        "start_date": "2014-11-26",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "e7fbd2a4-644a-43fb-ae71-66fb71b579ce",
+        "name": "Cyclone Challenge",
+        "location": "Ames, IA, USA",
+        "status": "closed",
+        "start_date": "2014-12-28",
+        "end_date": "2014-12-30"
+    }, {
+        "id": "ea5f9a1c-f717-451c-ab5e-5d7fa4d64d7c",
+        "name": "FIU Sun & Fun Classic",
+        "location": "Miami, FL, USA",
+        "status": "closed",
+        "start_date": "2014-12-28",
+        "end_date": "2014-12-30"
+    }, {
+        "id": "edb977f7-f6a5-48ec-9753-fabcffea160d",
+        "name": "Air Force Classic",
+        "location": "Colorado Springs, CO, USA",
+        "status": "closed",
+        "start_date": "2014-12-04",
+        "end_date": "2014-12-06"
+    }, {
+        "id": "f6d802fc-97ce-41ca-b035-eed16a421164",
+        "name": "St. John's Holiday Classic",
+        "location": "Queens, NY, USA",
+        "status": "closed",
+        "start_date": "2014-12-19",
+        "end_date": "2014-12-21"
+    }, {
+        "id": "f7b51ffb-6382-4398-b72c-55228e4cde80",
+        "name": "Georgia State Thanksgiving Tournament",
+        "location": "Atlanta, GA, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-30"
+    }, {
+        "id": "fa9ca7f6-6a27-426c-a97f-e7cbaf2d5717",
+        "name": "Georgia Tech Tournament",
+        "location": "Atlanta, GA, USA",
+        "status": "closed",
+        "start_date": "2014-12-28",
+        "end_date": "2014-12-30"
+    }, {
+        "id": "fbf642bb-d50e-48ed-9d93-130bddd3a74c",
+        "name": "Omni Classic",
+        "location": "Boulder, CO, USA",
+        "status": "closed",
+        "start_date": "2014-11-27",
+        "end_date": "2014-11-29"
+    }]
+}]
