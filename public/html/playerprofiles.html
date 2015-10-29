@@ -1,32 +1,11 @@
 	<h1>Player Profiles</h1>
-	<a href="/callPlayers">Player API</a>
+	<a href="" ng-click="callPlayers()">Player API</a>
 	<!-- <div ng-show="showPlayerProfiles"> -->
-		<h2 class="titles">Player Profiles</h2>
-		<div class="col-xs-12">
-	        <select class="form-control" ng-model="sortBy">
-	            <option value="None">-- Select --</option>
-	            <option value="Name">Name</option>
-	            <option value="Position">Position</option>
-	            <option value="Year">Year</option>
-	            <option value="Rebounds">Rebounds</option>
-	            <option value="Height">Height</option>
-	            <option value="Free Throw %">Free Throw %</option>
-	            <option value="Watching">Watching</option>
-	        </select>
-	    </div>
-		<div ng-repeat="profile in playerList" >  
-			<div class="playerCard">
-				<div class="row">
-					<div class="col-xs-12 individual"><h4>{{profile.firstName}} {{profile.lastName}}</h4>
-						<img src="{{profile.profilePic}}"><hr>
-						<h5>No: {{profile.jerseyNumber}} | Pos: {{profile.position}}</h5>
-						<h5>Ht: {{profile.height}} | Yr: {{profile.year}}</h5>
-						<h5>GP: {{profile.gamesPlayed}} | FG: {{profile.FG}}</h5>
-						<h5>3PT: {{profile.threePointers}} | FT: {{profile.FT}}</h5>
-						<h5>Rebound: {{profile.rebounds}} | Assists: {{profile.assists}}</h5>
-						Check to add player to watch list: <input type="checkbox" ng-model="confirmed" ng-change="isChecked($index)">
-					</div>
-				</div>
-			</div>
-		</div>
+
+		{{callPlayers.players[0].height}}
+
+
+<hr>
+
+
 	<!-- </div> -->

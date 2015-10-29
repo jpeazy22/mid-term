@@ -81,3 +81,37 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	=====================================
+	player profile.html info
+	=====================================
+			<h2 class="titles">Player Profiles</h2>
+		<div class="col-xs-12">
+	        <select class="form-control" ng-model="sortBy">
+	            <option value="None">-- Select --</option>
+	            <option value="Name">Name</option>
+	            <option value="Position">Position</option>
+	            <option value="Year">Year</option>
+	            <option value="Rebounds">Rebounds</option>
+	            <option value="Height">Height</option>
+	            <option value="Free Throw %">Free Throw %</option>
+	            <option value="Watching">Watching</option>
+	        </select>
+	    </div>
+		<div ng-repeat="profile in playerList" >  
+			<div class="playerCard">
+				<div class="row">
+					<div class="col-xs-12 individual"><h4>{{callplayers.firstName}} {{callplayers.lastName}}</h4>
+						<img src="{{callplayers.callplayersPic}}"><hr>
+						<h5>No: {{callplayers.jerseyNumber}} | Pos: {{callplayers.position}}</h5>
+						<h5>Ht: {{callplayers.height}} | Yr: {{callplayers.year}}</h5>
+						<h5>GP: {{callplayers.gamesPlayed}} | FG: {{callplayers.FG}}</h5>
+						<h5>3PT: {{callplayers.threePointers}} | FT: {{callplayers.FT}}</h5>
+						<h5>Rebound: {{callplayers.rebounds}} | Assists: {{callplayers.assists}}</h5>
+						Check to add player to watch list: <input type="checkbox" ng-model="confirmed" ng-change="isChecked($index)">
+					</div>
+				</div>
+			</div>
+		</div>

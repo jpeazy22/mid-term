@@ -2,29 +2,26 @@
 <div class="courtSide">
 	<!-- <h2 class="titles">Tournament Schedule</h2> -->
 	<!-- <a href="/callApi">Schedule API</a> -->
-	<a href="" ng-click="getTournamentSchedule()">Top Stories</a>
+	<!-- <ng-show="getTournamentSchedule()">Schedule</a> -->
 
 	<h1> Here comes the schedule </h1>	
 	
-	<div>
-		{{tournamentSchedule.games[0].venue.name}}<br>
-		{{tournamentSchedule.games[0].venue.city}}, 
-		{{tournamentSchedule.games[0].venue.state}}<br>
-		{{tournamentSchedule.games[0].scheduled}}
+	<div ng-repeat="tournament in tournamentSchedule">
+		<div class="row eachRow">
+			<div class="col-xs-12 col-sm-12 col-lg-12 tournamentList">
+				<h4>{{tournament.name}} | {{tournament.location}} | {{tournament.start_date}} | {{tournament.end_date}}</h4>
+			</div>
+		</div>
 	</div>
-	<hr>
-	<div>
-		{{tournamentSchedule.games[1].venue.name}}<br>
-		{{tournamentSchedule.games[1].venue.city}}, 
-		{{tournamentSchedule.games[1].venue.state}}<br>
-		{{tournamentSchedule.games[1].scheduled}}
-	</div>
-	<hr>
-	<div>
-		{{tournamentSchedule.games[2].venue.name}}<br>
-		{{tournamentSchedule.games[2].venue.city}}, 
-		{{tournamentSchedule.games[2].venue.state}}<br>
-		{{tournamentSchedule.games[2].scheduled}}
-	</div>
-
 </div>
+	<hr>
+	<a href="" ng-click="leagueHierarchy()">Leagues</a>
+	<div ng-repeat="division in teams track by $index">
+		<h4>{{division.name}}</h4>
+		<div ng-repeat="conference in division.conferences">
+			<h5>Conference Name: {{conference.name}}</h5>
+			<div ng-repeat="team in conference.teams">
+				<p ng-click="showPlayers(team.id)">Team Name: {{team.name}}</p>
+			</div>
+		</div>
+	</div> <!-- closes first ng-repeat -->

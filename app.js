@@ -4,7 +4,8 @@ var bodyParser = require("body-parser");
 var apiKeys = require("./apiKeys.json");
 var httpApi = require("request");
 
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/rosterApp')
 // Create Express App Object \\
 var app = express();
 
@@ -22,23 +23,32 @@ app.get("/",function(request,response){
 });
 
 app.get("/api/getTournamentSchedule", function(request, response){
-	console.log('we are about to send an API call')
-	httpApi('http://api.sportradar.us/ncaawb-t3/games/2015/REG/schedule.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
+	// console.log('we are about to send an API call')
+	httpApi('http://api.sportradar.us/ncaawb-t3/tournaments/2014/REG/schedule.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
 		  	if (!error && response.statusCode == 200) {
-		    console.log('we got a response from the API call')
+		    console.log('we got a response from the API call', body);
 			response.send(body)
 		 }
 	})
-})
+});
 
-app.get("/callPlayers", function(request, response){
-	httpApi('http://api.sportradar.us/ncaawb-t3/teams/6e0c5edc-4a6d-416b-9e10-7cccf13e971f/profile.xml?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
+app.get("/api/leagueHierarchy", function(request, response){
+	httpApi('http://api.sportradar.us/ncaawb-t3/league/hierarchy.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
 		  	if (!error && response.statusCode == 200) {
-		    console.log(body) // Show the HTML for the Schedule Info
+		    console.log('pulling league hierarchy', body) // Show the HTML for the Schedule Info
 			response.send(body)
 		 }
 	})
-})
+});
+
+app.get("/api/callPlayers/:team_id", function(request, response){
+	httpApi('http://api.sportradar.us/ncaawb-t3/teams/' + request.params.team_id + '/profile.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
+		  	if (!error && response.statusCode == 200) {
+		    console.log('pulling player profile info!!', body) // Show the HTML for the Schedule Info
+			response.send(body)
+		 }
+	})
+});
 
 
 
