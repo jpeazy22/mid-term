@@ -1,27 +1,69 @@
-<h1>Tournaments</h1>
-<div class="courtSide">
-	<!-- <h2 class="titles">Tournament Schedule</h2> -->
-	<!-- <a href="/callApi">Schedule API</a> -->
-	<!-- <ng-show="getTournamentSchedule()">Schedule</a> -->
-
-	<h1> Here comes the schedule </h1>	
-	
-	<div ng-repeat="tournament in tournamentSchedule">
-		<div class="row eachRow">
-			<div class="col-xs-12 col-sm-12 col-lg-12 tournamentList">
-				<h4>{{tournament.name}} | {{tournament.location}} | {{tournament.start_date}} | {{tournament.end_date}}</h4>
-			</div>
-		</div>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<h2 class="titles">Tournament Schedule</h2>
 	</div>
 </div>
-	<hr>
-	<a href="" ng-click="leagueHierarchy()">Leagues</a>
-	<div ng-repeat="division in teams track by $index">
-		<h4>{{division.name}}</h4>
-		<div ng-repeat="conference in division.conferences">
-			<h5>Conference Name: {{conference.name}}</h5>
-			<div ng-repeat="team in conference.teams">
-				<p ng-click="showPlayers(team.id)">Team Name: {{team.name}}</p>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<h3>NCAA Women's Basketball</h3>	
+	</div>
+</div>
+<div>
+	<div class="row eachRow">
+		<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+			<div class="row">
+				<div class="col-md-6" ng-repeat="tournament in tournamentSchedule">
+					<h4>{{tournament.name}}</h4>
+					{{tournament.location}} | {{tournament.start_date}} | {{tournament.end_date}}
+					<hr>
+				</div>
 			</div>
 		</div>
-	</div> <!-- closes first ng-repeat -->
+	</div> 
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<a href="" ng-click="leagueHierarchy()">Leagues</a>
+
+		<div class="row" ng-repeat="division in teams track by $index">
+			<div class="col-md-12">
+				<div>
+					<h3>{{division.name}}</h3>
+				</div>
+			</div>
+
+			<div class="col-md-12" ng-repeat="conference in division.conferences">
+
+				<h4>Conference Name: {{conference.name}}</h4>
+				
+			
+					<div ng-repeat="team in conference.teams">
+						<p ng-click="showPlayers(team.id, team)">Team Name: {{team.name}}</p>
+					
+						<p ng-show="team.players">Players</p> 
+							<!-- will only show if the value is truthy -->
+						<div ng-repeat="player in team.players" class="col-md-4 playerCard">
+							<h4>{{player.first_name}} {{player.last_name}}</h4>
+							{{player.position}} | {{player.experience}} | {{player.jersey_number}} | {{player.height}}
+							<textarea>Notes:</textarea>
+							<button class="btn-sm btn-warning">Add to Watchlist!</button>
+						</div>
+					</div>
+			</div>
+
+
+
+			
+					
+				
+
+
+
+
+
+		</div>
+	</div>	
+</div>
+
+		

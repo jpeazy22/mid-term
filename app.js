@@ -24,11 +24,12 @@ app.get("/",function(request,response){
 
 app.get("/api/getTournamentSchedule", function(request, response){
 	// console.log('we are about to send an API call')
-	httpApi('http://api.sportradar.us/ncaawb-t3/tournaments/2014/REG/schedule.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
+	httpApi('http://api.sportradar.us/ncaawb-t3/tournaments/2015/REG/schedule.json?api_key=' + apiKeys.sportRadar, function (error, apiResponse, body) {
 		  	if (!error && response.statusCode == 200) {
 		    console.log('we got a response from the API call', body);
 			response.send(body)
 		 }
+		 // http://api.sportradar.us/ncaawb-t3/games/2015/REG/schedule.xml?api_key=aaugwwmj9jxkfqr5w5ny7hks
 	})
 });
 
