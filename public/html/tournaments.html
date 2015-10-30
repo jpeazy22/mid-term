@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h2 class="titles">Tournament Schedule</h2>
+		<h2 class="titles">NCAA Women's Basketball</h2>
 	</div>
 </div>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h3>NCAA Women's Basketball</h3>	
+		<h3>Tournament Schedule</h3>	
 	</div>
 </div>
 <div>
@@ -24,7 +24,7 @@
 <hr>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<a href="" ng-click="leagueHierarchy()">Leagues</a>
+		<a href="" ng-click="leagueHierarchy()"><h3>Leagues</h3></a>
 
 		<div class="row" ng-repeat="division in teams track by $index">
 			<div class="col-md-12">
@@ -47,7 +47,7 @@
 							<h4>{{player.first_name}} {{player.last_name}}</h4>
 							{{player.position}} | {{player.experience}} | {{player.jersey_number}} | {{player.height}}
 							<textarea>Notes:</textarea>
-							<button class="btn-sm btn-warning">Add to Watchlist!</button>
+							<button ng-click="favoritePlayer(player)" class="btn-sm btn-warning">Add to Watchlist!</button>
 						</div>
 					</div>
 			</div>

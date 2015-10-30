@@ -1,17 +1,5 @@
-// We'll need access to passport in order to call authentication methods
 var passport = require('passport');
-
-// We also will be using our User model
 var User = require('../models/user');
-
-/**
- * A utility function (since we'll use it a couple times)
- * to abstract out the actual login procedure, which can
- * be used during authentication or signup. Because it
- * mirrors the middleware that calls it, the parameter
- * structure matches. We also need to know the user model
- * we want to log in.
- */
 var performLogin = function(req, res, next, user){
   // Passport injects functionality into the express ecosystem,
   // so we are able to call req.login and pass the user we want
@@ -119,7 +107,7 @@ var authenticationController = {
     req.logout();
 
     // Redirect back to the login page
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 };
 

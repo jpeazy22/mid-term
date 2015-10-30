@@ -24,6 +24,18 @@ angular.module("midApp")
 		templateUrl : "/html/watchlist.html",
 		controller  : "mainController"
 	})
+	.when("/auth/login", {
+		templateUrl : "/html/about.html",
+		controller : "mainController"
+	})
+	.when("/auth/signup", {
+		templateUrl : "/html/about.html",
+		controller : "mainController"
+	})
+	.when("/auth/logout", {
+		templateUrl : "/html/about.html",
+		controller : "mainController"
+	})
 	.otherwise({
 		redirectTo : '/error'
 	})
@@ -31,13 +43,36 @@ angular.module("midApp")
 }])
 
 angular.module('midApp')
-	.controller('mainController', ['$scope', '$http', function($scope, $http){
+	.service('authService', ['$http', '$location', function($http){
+		
+		this.authCheck = function(cb){
+			$http.get('/api/me')
+				.then( function(returnData){
+					cb(returnData.data)
+
+				})
+		}
+					
+						
+	}])
+
+angular.module('midApp')
+	.controller('mainController', ['$scope', '$http', 'authService', function($scope, $http, authService){
+		console.log('AUTH', authService)
+
+		authService.authCheck(function(user){
+			console.log('USER!', user)
+			$scope.user = user
+		})
+
+
+
 		$scope.greeting = "Welcome Ballers";
 		$scope.tournamentSchedule;
 		$scope.callPlayer;
 		$scope.teams;
 
-		// console.log('we are about to send an httpGet')
+		console.log('we are about to send an httpGet')
 		$http.get('/api/getTournamentSchedule')
 		.then(function(returnData){
 			$scope.tournamentSchedule = returnData.data.tournaments;
@@ -48,22 +83,13 @@ angular.module('midApp')
 			$http.get('/api/leagueHierarchy')
 			.then(function(returnData){
 				$scope.teams = returnData.data.divisions;
-				console.log('$scope.teams',$scope.teams)
+				// console.log('$scope.teams',$scope.teams)
 				// console.log( 'league divisions', $scope.leagues.divisions)
-			})
-		};
-		
-		$scope.callPlayers = function() {
-			console.log('sending request for players')
-			$http.get('/api/callPlayers')
-			.then(function(returnData){
-				console.log('about to display players:', returnData.data )
-				$scope.callPlayer = returnData.data
 			})
 		};
 
 		$scope.showPlayers = function(teamId, team){
-			console.log(teamId)
+			// console.log(teamId)
 			$http.get('/api/callPlayers/' + teamId)
 			.then(function(returnData){
 				console.log('teamId', returnData)
@@ -73,10 +99,11 @@ angular.module('midApp')
 			})
 		};
 
-		// $scope.showTeammates = function(){
-		// 	console.log('where are the players')
-		// 	$http.get()
-		// }
+		$scope.favoritePlayer = function(player){
+			console.log('player:', player)
+			$http.post('/api/favorites', player)
+
+		};
 }]);
 
 

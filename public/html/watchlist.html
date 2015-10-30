@@ -1,1 +1,18 @@
-<h1>Watch List</h1>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<h2 class="titles">Favorites</h2>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<div ng-repeat="fav in user.favorites" class="col-md-12 playerCard">
+			<h4>{{fav.full_name}}</h4>
+			<img src="{{fav.profilePic}}">
+			{{fav.position}} | {{fav.experience}} | {{fav.jersey_number}} | {{fav.height}}
+			<textarea>Notes:</textarea>
+			<button class="btn-sm btn-warning">X</button>
+	<!-- add click handlers to remove -->
+		</div>
+	</div>
+</div>

@@ -116,7 +116,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 }
 
 .playerCard {
-	border: solid 1px #888888;
+	/*border: solid 1px #888888;*/
 	background-color: rgba(242, 242, 242, .3);
 	display: inline-block;
 	float: left;
@@ -125,13 +125,13 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 	border-radius: 5px;
 	padding: 5px;
 	text-align: center;
-	box-shadow: 2px 2px 2px #888888;
+	box-shadow: 2px 2px 7px #888888;
 	color: #000;
 }
 
 textarea {
  /*background-image: url("note.png") repeat-y;*/
- background-color: #fcfdd2;
+ /*background-color: #fcfdd2;*/
  width: 100%;
  height: 35%;
  font: normal 14px verdana;
