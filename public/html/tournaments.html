@@ -4,66 +4,58 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h3>Tournament Schedule</h3>	
+	<div class="col-xs-6 col-md-offset-2 col-md-3 tournamentHeading">
+		<a href="" ng-click="showSchedule=true"><h3 class="headings">Tournament Schedule</h3></a>
+	</div>
+	<div class="col-xs-6 col-md-3 col-md-offset-1 tournamentHeading">
+		<a href="" ng-click="leagueHierarchy()"><h3 class="headings">NCAA Divisions</h3></a>
 	</div>
 </div>
-<div>
-	<div class="row eachRow">
-		<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-			<div class="row">
-				<div class="col-md-6" ng-repeat="tournament in tournamentSchedule">
-					<h4>{{tournament.name}}</h4>
-					{{tournament.location}} | {{tournament.start_date}} | {{tournament.end_date}}
-					<hr>
-				</div>
+<div class="row eachRow">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<div class="row" ng-show="showSchedule">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+				<h4>2015 NCAA Women's Basketball Tournament Schedule</h4>
+				<hr>
 			</div>
+			<div class="col-md-6" ng-repeat="tournament in tournamentSchedule">
+				<h4>{{tournament.name}}</h4>
+				{{tournament.location}} | {{tournament.start_date}} | {{tournament.end_date}}
+				<hr>
+			</div>
+			<button ng-click="showSchedule=false">X</button>
 		</div>
-	</div> 
-</div>
+	</div>
+</div> 
 <hr>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<a href="" ng-click="leagueHierarchy()"><h3>Leagues</h3></a>
-
+		<input ng-model="searchBar" placeholder="Search for conference">
 		<div class="row" ng-repeat="division in teams track by $index">
 			<div class="col-md-12">
-				<div>
-					<h3>{{division.name}}</h3>
+				<div class="divisionTitle">
+					<p>{{division.name}}</p>
 				</div>
 			</div>
-
-			<div class="col-md-12" ng-repeat="conference in division.conferences">
-
-				<h4>Conference Name: {{conference.name}}</h4>
-				
-			
-					<div ng-repeat="team in conference.teams">
-						<p ng-click="showPlayers(team.id, team)">Team Name: {{team.name}}</p>
-					
-						<p ng-show="team.players">Players</p> 
+			<div class="col-xs-offset-1 col-xs-10 divisionSection" ng-repeat="conference in division.conferences | filter : searchConferenceFilter">
+				<p>Conference: {{conference.name}}</p>
+				<div class="col-xs-offset-1 col-xs-9 teamTitles" ng-repeat="team in conference.teams" >
+					<p ng-click="showPlayers(team.id, team)">Team: {{team.name}}</p>
+					<div class="row">
+						<div ng-show="team.players" class="playerHeading col-md-12">Players</div> 
+					</div>
 							<!-- will only show if the value is truthy -->
-						<div ng-repeat="player in team.players" class="col-md-4 playerCard">
-							<h4>{{player.first_name}} {{player.last_name}}</h4>
-							{{player.position}} | {{player.experience}} | {{player.jersey_number}} | {{player.height}}
-							<textarea>Notes:</textarea>
-							<button ng-click="favoritePlayer(player)" class="btn-sm btn-warning">Add to Watchlist!</button>
+					<div class="row">
+						<div ng-repeat="player in team.players" class="col-md-offset-2 col-md-10 playerSection">
+							<h4>{{player.first_name}} {{player.last_name}} | #{{player.jersey_number}} | {{player.teamName}}</h4>
+							<h5>Position: {{player.position}}  |  Class: {{player.experience}}  |   Height: {{player.height}}     
+							<button ng-click="favoritePlayer(player)" class="btn-sm btn-default">Add to Favorites!</button></h5>
 						</div>
 					</div>
+				</div>
 			</div>
-
-
-
-			
-					
-				
-
-
-
-
-
 		</div>
-	</div>	
-</div>
+	</div>
+</div>	
 
 		

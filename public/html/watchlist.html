@@ -6,12 +6,20 @@
 
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<div ng-repeat="fav in user.favorites" class="col-md-12 playerCard">
-			<h4>{{fav.full_name}}</h4>
-			<img src="{{fav.profilePic}}">
-			{{fav.position}} | {{fav.experience}} | {{fav.jersey_number}} | {{fav.height}}
-			<textarea>Notes:</textarea>
-			<button class="btn-sm btn-warning">X</button>
+		<div ng-repeat="fav in user.favorites" class="col-xs-6 playerCard">
+			<img src="img/playerImageHolder2.png" width="100px">
+			<h4 class="titles">{{fav.full_name}}</h4> 
+			<p class="titles">#{{fav.jersey_number}}</p>
+			<h4>{{fav.teamName}}</h4>
+			<hr>
+			<p>Position: {{fav.position}}
+			| Class: {{fav.experience}}
+			| Height: {{fav.height}}
+			| Hometown: {{fav.birth_place}}
+			<textarea ng-model="fav.notes">Notes:</textarea>
+			<button class="btn-xs btn-warning" ng-click="saveNotes()">Save Notes</button>
+
+			<button class="btn-xs btn-warning" ng-click="removePlayer(fav.id)">Remove from Favorites</button>
 	<!-- add click handlers to remove -->
 		</div>
 	</div>

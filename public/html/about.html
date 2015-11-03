@@ -1,9 +1,14 @@
 <div class="row">
-	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h4>Log In</h4>
+	<div class="col-xs-offset-2 col-xs-6 col-xs-offset-2">
+		<a href="" ng-click="showLogInForm = !showLogInForm"><p>Log in to access all the features!</p></a>
 	</div>
+	<div class="col-xs-offset-2 col-xs-2 col-xs-offset-2">
+		  <a href="/auth/logout"><p>Log Out</p></a>
+	</div>
+</div>
 <div class="row">
-	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2 logIn" ng-show="showLogInForm">
+		  <h4>Log In</h4>
 		  <form action="/auth/login" method="post">
 		    <input type="text" name="username" placeholder="Username"/>
 		    <input type="password" name="password" placeholder="Password"/>
@@ -15,22 +20,30 @@
 		    <input type="email" name="email" placeholder="Email"/>
 		    <input type="password" name="password" placeholder="Password"/>
 		    <input type="submit"/>
+			<button class="btn-sm btn-warning" ng-click="showLogInForm = !showLogInForm">X</button>
 		  </form>
-		  <a href="/auth/logout">Log Out</a>
   	</div>
 </div>
-
-
 <div class="row">
-		<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h1>Hey there {{user.username}}!</h1>
-		</div>
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<h3>Welcome {{user.username}}!</h3>
+	</div>
+</div>
+<hr>
 <div class="row">
-		<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-			<h2 class="titles">Rosters!</h2>
-			<h4 class="sub-titles">Best Recruiting App Ever... well in 5 weeks.</h4>
-			<h5>How it works:</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget tempus sem. Morbi cursus mauris ac dignissim convallis. Nulla vulputate placerat gravida. Integer in condimentum odio. Mauris accumsan lacinia libero. Vivamus sit amet lectus et nisi sodales vehicula nec non magna. Vivamus commodo suscipit arcu, vitae accumsan sapien gravida et. Vivamus tincidunt fermentum risus id volutpat. Etiam mattis diam nibh, vitae laoreet nibh rutrum nec. Sed ut mattis lacus, pretium sodales lectus. Quisque blandit nisl magna, eget imperdiet nisi vestibulum at.</p>
-		</div>
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<h2 class="titles">Rosters!</h2>
+		<h4 class="sub-titles">A Recruiters Best Friend!</h4>
+		Access to Schedules, Teams and Players at your fingertips.
+		<h5>How it used to work:</h5>
+		<img src="http://www.addictinginfo.org/wp-content/uploads/2013/02/Sad-office-worker-happiness.jpg" width="300px">
+		<p>1. Select a tournament</p>
+		<p>2. Select League and search for Teams</p>
+		<p>3. Locate Player and view profiles</p>
+		<p>4. Add Players to your "favorites" to follow along.  Add notes for later use.</p>
+		<p>5. Pull up teams to compare stats</p>
+		<img src="img/rostersIpad.png" width="300px">
+		<p>6. </p>
+	</div>
 </div>
    

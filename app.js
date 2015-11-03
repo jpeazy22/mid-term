@@ -116,13 +116,34 @@ app.post("/api/favorites", function(request, response){
 		console.log(error, 'error')
 		console.log(doc, 'doc')
 	})
-	response.send('user favories')
+	response.send('user favorites')
 })
+
+app.post("/api/removeFavorite", function(request, response){
+	User.update({_id: request.user._id}, {$pull: {"favorites": {id:request.body.playerId}}}, function(error, apiResponse){
+		User.findOne({_id: request.user._id}, function(error, apiResponse){
+		response.send(apiResponse)
+		request.user = apiResponse	
+		})
+	})
+})
+
+
+app.post("/api/notes", function(request, response){
+	User.update({_id: request.user._id}, request.body, function(error, apiResponse){
+		response.send('good job saving more info')
+	})
+})
+
+// app.get("/api/getStandings/:team_id", function(request, response){
+// 	httpApi('http://api.sportradar.us/ncaawb-t3/seasontd/2014/REG/standings.json?api_key=' + apiKeys.sportRadar,
+// 		function (error, apiResponse, body) {
+// 	})
+// })
 
 app.use(function(request,response){
 	response.send("This file does not exist.")
 })
-
 
 // Creating Server and Listening for Connections \\
 var port = 3000
