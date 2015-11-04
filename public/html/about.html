@@ -1,6 +1,6 @@
-<div class="row">
+<!-- <div class="row">
 	<div class="col-xs-offset-2 col-xs-6 col-xs-offset-2">
-		<a href="" ng-click="showLogInForm = !showLogInForm"><p>Log in to access all the features!</p></a>
+		<a href="" ng-click="showLogInForm=true"><p>Log in</p></a>
 	</div>
 	<div class="col-xs-offset-2 col-xs-2 col-xs-offset-2">
 		  <a href="/auth/logout"><p>Log Out</p></a>
@@ -20,30 +20,45 @@
 		    <input type="email" name="email" placeholder="Email"/>
 		    <input type="password" name="password" placeholder="Password"/>
 		    <input type="submit"/>
-			<button class="btn-sm btn-warning" ng-click="showLogInForm = !showLogInForm">X</button>
-		  </form>
+			<button class="btn-sm btn-warning" ng-click="showLogInForm=false">X</button> -->
+		  
   	</div>
 </div>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h3>Welcome {{user.username}}!</h3>
+		<h4 class="welcome">Welcome {{user.username}}!</h4>
 	</div>
 </div>
 <hr>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-		<h2 class="titles">Rosters!</h2>
-		<h4 class="sub-titles">A Recruiters Best Friend!</h4>
-		Access to Schedules, Teams and Players at your fingertips.
-		<h5>How it used to work:</h5>
-		<img src="http://www.addictinginfo.org/wp-content/uploads/2013/02/Sad-office-worker-happiness.jpg" width="300px">
-		<p>1. Select a tournament</p>
-		<p>2. Select League and search for Teams</p>
-		<p>3. Locate Player and view profiles</p>
-		<p>4. Add Players to your "favorites" to follow along.  Add notes for later use.</p>
-		<p>5. Pull up teams to compare stats</p>
-		<img src="img/rostersIpad.png" width="300px">
-		<p>6. </p>
+		<h1 class="subTitles">Rosters!</h1>
+		<h1 class="subTitles2">A recruiters best friend.</h1>
+		<h3 class="tagline">Access to Schedules, Teams and Players at your fingertips.</h3>
+		<hr>
+	</div>
+	<div class="row homePics">
+		<div class="col-md-4 col-md-offset-2">
+			<h5>Go from this:</h5>
+			<img src="http://www.addictinginfo.org/wp-content/uploads/2013/02/Sad-office-worker-happiness.jpg" width="300px">
+		</div>
+		<div class="col-md-4">
+			<h5>To this:</h5>
+			<img src="img/rostersIpad.png" width="300px">
+		</div>
 	</div>
 </div>
-   
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+		<hr>
+		<ul class="appDetails">
+			<li>View tournament dates</li>
+			<li>View all NCAA Divisions, Conferences, Teams and Players</li>
+			<li>Locate Player and view profiles</li>
+			<li>Add Players to your "favorites" to follow along.</li>
+			<li>Add notes to players in "favorites" to reference for later use.</li>
+			<li>Pull up teams to compare stats</li>
+		</ul>
+	</div>
+</div>
+

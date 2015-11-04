@@ -4,10 +4,10 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-xs-6 col-md-offset-2 col-md-3 tournamentHeading">
+	<div class="col-xs-5 col-xs-offset-1 col-md-offset-2 col-md-3 tournamentHeading">
 		<a href="" ng-click="showSchedule=true"><h3 class="headings">Tournament Schedule</h3></a>
 	</div>
-	<div class="col-xs-6 col-md-3 col-md-offset-1 tournamentHeading">
+	<div class="col-xs-5 col-xs-offset-1 col-md-3 col-md-offset-1 tournamentHeading">
 		<a href="" ng-click="leagueHierarchy()"><h3 class="headings">NCAA Divisions</h3></a>
 	</div>
 </div>
@@ -46,10 +46,10 @@
 					</div>
 							<!-- will only show if the value is truthy -->
 					<div class="row">
-						<div ng-repeat="player in team.players" class="col-md-offset-2 col-md-10 playerSection">
-							<h4>{{player.first_name}} {{player.last_name}} | #{{player.jersey_number}} | {{player.teamName}}</h4>
-							<h5>Position: {{player.position}}  |  Class: {{player.experience}}  |   Height: {{player.height}}     
-							<button ng-click="favoritePlayer(player)" class="btn-sm btn-default">Add to Favorites!</button></h5>
+						<div ng-repeat="player in team.players" class="col-md-offset-1 col-md-12 playerSection">
+							<p class="one">{{player.first_name}} {{player.last_name}} | #{{player.jersey_number}} | {{player.teamName}}</p>
+							<p class="two">Position: {{player.position}}  |  Class: {{player.experience}}  |   Height: {{player.height}}  </p>   
+							<button ng-click="favoritePlayer(player)" class="btn-sm btn-warning favHover"><span class="glyphicon glyphicon-heart"></span></button>
 						</div>
 					</div>
 				</div>

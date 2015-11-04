@@ -115,6 +115,8 @@ angular.module('midApp')
 		$scope.favoritePlayer = function(player){
 			console.log('=================================player:', player)
 			$http.post('/api/favorites', player)
+			alert('Added to Favorties!')
+
 		};
 
 		$scope.removePlayer = function(playerId){

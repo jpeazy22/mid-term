@@ -10,38 +10,68 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
 		<title>Rosters!</title>
 	</head>
 	<body ng-cloak>
 			<!-- {{greeting}} -->
-	    	<nav class="navbar navbar-default" role="navigation">
-	           	<div class="navbar-header">
-                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                	</button>
-	            </div>
-	            <div class="row">
-        			<div class="col-md-offset-3 col-md-2 col-md-offset-2">
-	                		<a class="navbar-brand" href="/#/">
-	                    		<img src="img/rostersLogo2.png" alt="Rosters Logo" width="200px">
-	                		</a>
-	                </div>
-					<div class="collapse navbar-collapse col-md-offset-3 col-md-2 col-md-offset-2" id="bs-example-navbar-collapse-1">
-                		<ul class="nav navbar-nav">
-							<li><a href="/#/">About</a></li>
-							<li><a href="/#/tournaments">Tournaments</a></li>
-							<li><a href="/#/matchup">Match Up</a></li>
-							<!-- <li><a href="/#/login">Log In</a></li> -->
-							<li><a href="/#/watchlist">Favorites</a></li>
-						</ul>
+		<div class="row">
+			<div class="col-xs-12">	
+		    	<nav class="navbar navbar-default" role="navigation">
+		         <!--   	<div class="navbar-header">
+	                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                	</button>
+		            </div> -->
+	            	<div class="row">
+						<div class="col-xs-7 col-xs-offset-5 col-md-offset-9 col-md-3">
+							<ul class="logNav">
+								<li><a href="" ng-click="showLogInForm=true"><p>Log in</p></a></li>
+								<li><a href="/auth/logout"><p>Log Out</p></a></li>
+							</ul>
+						</div>
 					</div>
-            	</div>
-			</nav>
-
+		            <div class="row">
+	        			<div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-4">
+		                		<a class="navbar-brand" href="/#/">
+		                    		<img src="img/rostersLogo2.png" alt="Rosters Logo" width="200px">
+		                		</a>
+		                </div>
+						<div class="col-xs-offset-1 col-xs-10 col-md-4 navList" >
+	                		<ul class="nav navbar-nav">
+								<li><a href="/#/">About</a></li>
+								<li><a href="/#/tournaments">Tournaments</a></li>
+								<li><a href="/#/matchup">Match Up</a></li>
+								<!-- <li><a href="/#/login">Log In</a></li> -->
+								<li><a href="/#/watchlist">Favorites</a></li>
+							</ul>
+						</div>
+	            	</div>
+					<div class="row">
+						<div class="col-md-offset-2 col-md-6 col-md-offset-2 logIn" ng-show="showLogInForm">
+							  <h4>Log In</h4>
+							  <form action="/auth/login" method="post">
+							    <input type="text" name="username" placeholder="Username"/>
+							    <input type="password" name="password" placeholder="Password"/>
+							    <input type="submit"/>
+							  </form>
+							  <h4>Sign Up</h4>
+							  <form action="/auth/signup" method="post">
+							    <input type="text" name="username" placeholder="Username"/>
+							    <input type="email" name="email" placeholder="Email"/>
+							    <input type="password" name="password" placeholder="Password"/>
+							    <input type="submit"/>
+								<!-- <button class="btn-sm btn-warning" ng-click="showLogInForm=false">X</button> -->
+							  </form>
+					  	</div>
+					</div>
+				</nav>
+			</div>
+		</div>
 		<div class="container" ng-controller="mainController">
 			<div ng-view>
 					<!-- Templates will be injected here -->

@@ -8,14 +8,14 @@
 	<div class="col-md-offset-2 col-md-8 col-md-offset-2">
 		<div ng-repeat="fav in user.favorites" class="col-xs-6 playerCard">
 			<img src="img/playerImageHolder2.png" width="100px">
-			<h4 class="titles">{{fav.full_name}}</h4> 
-			<p class="titles">#{{fav.jersey_number}}</p>
-			<h4>{{fav.teamName}}</h4>
+			<h4 class="subTitles">{{fav.full_name}} #{{fav.jersey_number}}</h4> 
+			<!-- <h4 class="subTitles">#{{fav.jersey_number}}</h4> -->
+			<h3>{{fav.teamName}}</h3>
 			<hr>
-			<p>Position: {{fav.position}}
-			| Class: {{fav.experience}}
-			| Height: {{fav.height}}
-			| Hometown: {{fav.birth_place}}
+			<p>Hometown: {{fav.birth_place}}</p>
+			<p>Position: {{fav.position}}</p>
+			<p>Class: {{fav.experience}}</p>
+			<p>Height: {{fav.height}}</p>
 			<textarea ng-model="fav.notes">Notes:</textarea>
 			<button class="btn-xs btn-warning" ng-click="saveNotes()">Save Notes</button>
 
